@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Acompaño a equipos de industrias y PyMEs a tener las conversaciones que no se dan, y a convertirlas en acuerdos que se notan en el clima y en los números. Santiago Fernández — ingeniero industrial y coach organizacional.">
+<meta name="author" content="Santiago Fernández">
+<meta name="theme-color" content="#F7F8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1411" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Equipos que se potencian — Santiago Fernández">
+<meta property="og:description" content="Hay conversaciones que un equipo no se da. Cuando se dan, el trabajo cambia.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232E6B4F'/%3E%3Cpath d='M9 12h14M9 17h10' stroke='%23F7F8F4' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Equipos que se potencian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+  :root{
+    --paper:#F7F8F4;
+    --surface:#FFFFFF;
+    --line:#DFE3DA;
+    --ink:#161C17;
+    --muted:#606A5F;
+    --accent:#2E6B4F;
+    --accent-soft:#EAF1EB;
+    --ochre:#A8701A;
+    --shadow:0 1px 2px rgba(22,28,23,.05), 0 8px 24px -12px rgba(22,28,23,.14);
+    --maxw:37rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0F1411;
+      --surface:#171E19;
+      --line:#2A342C;
+      --ink:#E7ECE4;
+      --muted:#9AA79A;
+      --accent:#6FBF95;
+      --accent-soft:#1B2620;
+      --ochre:#D9A45B;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0F1411;
+    --surface:#171E19;
+    --line:#2A342C;
+    --ink:#E7ECE4;
+    --muted:#9AA79A;
+    --accent:#6FBF95;
+    --accent-soft:#1B2620;
+    --ochre:#D9A45B;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:2.75rem 1.35rem 3.5rem;
+    display:flex;
+    flex-direction:column;
+    gap:3.25rem;
+  }
+  .eyebrow{
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--accent);
+    margin:0;
+  }
+  h1{
+    font-family:"Newsreader",Georgia,serif;
+    font-weight:400;
+    font-size:clamp(2rem,7.5vw,2.85rem);
+    line-height:1.14;
+    letter-spacing:-.012em;
+    text-wrap:balance;
+    margin:.85rem 0 0;
+  }
+  h1 em{font-style:italic;color:var(--accent);}
+  h2{
+    font-family:"Newsreader",Georgia,serif;
+    font-weight:500;
+    font-size:1.42rem;
+    line-height:1.25;
+    letter-spacing:-.008em;
+    text-wrap:balance;
+    margin:0 0 .9rem;
+  }
+  p{margin:0 0 1rem;}
+  p:last-child{margin-bottom:0;}
+  .lead{font-size:1.06rem;color:var(--muted);margin-top:1.15rem;}
+  section{display:block;}
+  .rule{height:1px;background:var(--line);border:0;margin:0;}
+
+  ul.signals{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem;}
+  ul.signals li{
+    padding-left:1.4rem;
+    position:relative;
+    color:var(--ink);
+  }
+  ul.signals li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.72em;
+    width:.5rem;height:1px;
+    background:var(--accent);
+  }
+
+  ol.steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.5rem;counter-reset:step;}
+  ol.steps li{display:grid;grid-template-columns:2rem 1fr;gap:.9rem;align-items:start;}
+  ol.steps li::before{
+    counter-increment:step;
+    content:counter(step,decimal-leading-zero);
+    font-variant-numeric:tabular-nums;
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.06em;
+    color:var(--accent);
+    padding-top:.42em;
+  }
+  ol.steps strong{
+    display:block;
+    font-family:"Newsreader",Georgia,serif;
+    font-weight:500;
+    font-size:1.12rem;
+    letter-spacing:-.005em;
+  }
+  ol.steps span{display:block;color:var(--muted);font-size:.97rem;margin-top:.15rem;}
+
+  .case{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:.35rem;
+    padding:1.6rem 1.4rem;
+    box-shadow:var(--shadow);
+  }
+  .case .label{
+    font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--muted);margin:0 0 .9rem;
+  }
+  .case p{font-size:1rem;}
+  .figure{
+    margin:1.25rem 0 0;
+    padding-top:1.1rem;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:baseline;
+    gap:.7rem;
+    flex-wrap:wrap;
+  }
+  .figure .num{
+    font-family:"Newsreader",Georgia,serif;
+    font-size:2.1rem;
+    line-height:1;
+    color:var(--ochre);
+    font-variant-numeric:tabular-nums;
+  }
+  .figure .cap{font-size:.93rem;color:var(--muted);flex:1 1 12rem;}
+
+  .quote{
+    font-family:"Newsreader",Georgia,serif;
+    font-style:italic;
+    font-size:1.24rem;
+    line-height:1.4;
+    color:var(--ink);
+    border-left:2px solid var(--accent);
+    padding-left:1.1rem;
+    margin:0;
+    text-wrap:balance;
+  }
+
+  .start{
+    background:var(--accent-soft);
+    border-radius:.35rem;
+    padding:1.5rem 1.4rem;
+  }
+  .start h2{margin-bottom:.7rem;}
+  .start p{color:var(--ink);}
+
+  .card{
+    border:1px solid var(--line);
+    border-radius:.35rem;
+    padding:1.4rem;
+    background:var(--surface);
+  }
+  .who{display:flex;flex-direction:column;gap:.15rem;margin-bottom:1rem;}
+  .who .name{font-family:"Newsreader",Georgia,serif;font-size:1.25rem;font-weight:500;}
+  .who .role{color:var(--muted);font-size:.95rem;}
+  .contact{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem;font-size:.97rem;}
+  .contact li{display:flex;gap:.6rem;align-items:baseline;}
+  .contact .k{
+    font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;min-width:5.2rem;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);}
+  a:hover{border-bottom-color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+
+  .forward{
+    font-size:.92rem;
+    color:var(--muted);
+    text-align:center;
+    text-wrap:balance;
+  }
+
+  .fade{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion: reduce){
+    .fade{animation:none;opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="fade">
+    <p class="eyebrow">Acompañamiento de equipos</p>
+    <h1>Hay conversaciones que un equipo no se da. Cuando se dan, <em>el trabajo cambia</em>.</h1>
+    <p class="lead">Acompaño a equipos de industrias y PyMEs a tener esas conversaciones, y a convertirlas en acuerdos que se notan en el clima y en los números.</p>
+  </header>
+
+  <hr class="rule">
+
+  <section>
+    <h2>Cómo se nota que faltan</h2>
+    <ul class="signals">
+      <li>Cosas que se hablan en el pasillo y no en la reunión.</li>
+      <li>Roces que nadie nombra y que terminan costando tiempo.</li>
+      <li>Mejoras que están en la cabeza de alguien y nunca se prueban.</li>
+      <li>Gente que cumple, pero sin ganas.</li>
+    </ul>
+    <p class="lead">Nada de esto aparece en un tablero. Se paga igual: en demoras, en retrabajo, en gente que se va.</p>
+  </section>
+
+  <section>
+    <h2>Cómo trabajo</h2>
+    <ol class="steps">
+      <li>
+        <div>
+          <strong>Escucho y entiendo el contexto</strong>
+          <span>Converso con quien conduce y con el equipo: cómo está hoy y cuál es la necesidad concreta.</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Diseño y facilito el encuentro</strong>
+          <span>Un espacio armado para ese equipo, donde se dice lo que no se dice, cuidado y productivo.</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Lo bajamos a acuerdos</strong>
+          <span>Salimos con compromisos concretos y una forma de sostenerlos en el tiempo.</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="case">
+    <p class="label">Un caso, en concreto</p>
+    <p>En una distribuidora del interior de Buenos Aires trabajamos con el equipo de depósito: cuatro personas, con tensiones que nadie nombraba. Durante el proceso uno dejó la empresa.</p>
+    <p>Los tres que quedaron sacan hoy el doble de trabajo del que hacían los cuatro. No cambió el proceso: cambió que se pudieron hablar.</p>
+    <div class="figure">
+      <span class="num">3&nbsp;&rarr;&nbsp;2&times;</span>
+      <span class="cap">tres personas produciendo el doble que cuatro, sin inversión en equipamiento</span>
+    </div>
+  </section>
+
+  <section>
+    <p class="quote">Cuando el equipo puede hablar, aparecen las mejoras: de procesos, de sistemas, de cómo se organiza el día. Las ganas hacen la otra mitad del trabajo.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <h2>Quién lo hace</h2>
+    <p>Ingeniero industrial con más de veinte años en la industria y coach organizacional. Conozco la planta y conozco la conversación: no llego con un manual, llego con preguntas y con un método para que el equipo encuentre sus propias respuestas.</p>
+    <p>Trabajo con PyMEs, equipos operativos y mandos medios.</p>
+  </section>
+
+  <section class="start">
+    <h2>Cómo empezamos</h2>
+    <p>Nos juntamos cuarenta minutos, sin costo y sin compromiso, con quien esté a cargo del equipo o de las personas. De ahí siempre sale algo: a veces una propuesta concreta de trabajo, a veces un par de ideas para probar por su cuenta, y siempre un vínculo honesto.</p>
+  </section>
+
+  <section class="card">
+    <div class="who">
+      <span class="name">Santiago Fernández</span>
+      <span class="role">Ingeniero industrial &middot; Coach organizacional</span>
+    </div>
+    <ul class="contact">
+      <li><span class="k">Mail</span> <a href="mailto:santifernan@gmail.com">santifernan@gmail.com</a></li>
+      <li><span class="k">WhatsApp</span> <a href="https://wa.me/5491167987710">+54 9 11 6798-7710</a></li>
+      <li><span class="k">LinkedIn</span> <a href="https://www.linkedin.com/in/santifernan79/">linkedin.com/in/santifernan79</a></li>
+    </ul>
+  </section>
+
+  <p class="forward">¿Le puede servir a alguien más de la empresa? Pasale este link.</p>
+
+</div>
+
+
+</body>
+</html>
